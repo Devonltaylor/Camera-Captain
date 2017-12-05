@@ -24,30 +24,40 @@ class App extends Component {
         <div className="App-title"></div>
         <h2>Camera Captain</h2>
 
-        <FormGroup>
-          <InputGroup>
-            <FormControl
-              type="text" placeholder="Search for..." value={this.state.query} onChange={event => {this.setState({query: event.target.value})}}
-              onKeyPress={event => {
-                if (event.key === 'Enter') {
-                  this.search()
-                }
-              }}
-            />
-              <InputGroup.Addon onClick={() => this.search()}>
-                <Glyphicon glyph="search"></Glyphicon>
-              </InputGroup.Addon>
-          </InputGroup>
-        </FormGroup>
+        <div className="categoriesContainer">
+          <div className="contain">
+            Portraits
+          </div>
 
-        <div className="homePage">
-          <div className="locationContainer">
-            map will go here
+          <div className="contain">
+            Lowlight
+          </div>
+
+          <div className="contain">
+            Landscapes
+          </div>
+
+          <div className="contain">
+            Sharpness
           </div>
         </div>
 
-        <div>My Sets</div>
-        <div>My Gear</div>
+        <div className="videoLinkContainer">
+          <div className="videoContent">
+            <div id="youtubeVideo">
+              Vid
+            </div>
+            <h3>Title</h3>
+            <p>text will go in this area.....</p>
+            <div id="youtubeVideo">
+              Vid
+            </div>
+            <div id="youtubeVideo">
+              Vid
+            </div>
+          </div>
+        </div>
+
       </div>
     )
   }

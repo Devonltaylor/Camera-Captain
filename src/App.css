@@ -3,6 +3,11 @@ body {
   background-color: lightblue;
 }
 
+
+/*******************
+    MAIN PAGE
+*******************/
+
 .menuButton {
   display: flex;
 
@@ -11,13 +16,55 @@ body {
 .App {
   text-align: center;
   padding: 5%;
-  background-color: red;
+  background-color: #3498db;
 }
 
-.locationContainer {
-  background-color: grey;
+.categoriesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
   padding: 20%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  color: white;
+  background-color: grey;
+}
+
+.contain {
+  height: 150px;
+  width: 150px;
+  background-color: white;
+
+  margin: 2%;
+}
+
+/*.contain:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}*/
+
+
+
+/*******************
+VIDEO CONTENT PAGE
+*******************/
+
+.videoLinkContainer {
+  display: flex;
+  flex-direction: column;
+  /*flex-wrap: wrap;*/
+  justify-content: flex-start;
+
+
+  margin-top: 40px;
+  padding: 20%;
+  background-color: grey;
+}
+
+#youtubeVideo {
+  height: 150px;
+  width: 250px;
+
+  background-color: white;
+  margin: 20px;
 }
