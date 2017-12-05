@@ -26,7 +26,7 @@ body {
   justify-content: center;
 
   padding: 20%;
-  background-color: grey;
+  background-color: #bdc3c7;
 }
 
 .contain {
@@ -67,4 +67,8 @@ VIDEO CONTENT PAGE
 
   background-color: white;
   margin: 20px;
+}
+
+#videoDescription {
+  float: left;
 }
