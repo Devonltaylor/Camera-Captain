@@ -1,0 +1,23 @@
+
+body {
+  background-color: lightblue;
+}
+
+.menuButton {
+  display: flex;
+
+}
+
+.App {
+  text-align: center;
+  padding: 5%;
+  background-color: red;
+}
+
+.locationContainer {
+  background-color: grey;
+  padding: 20%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+}
