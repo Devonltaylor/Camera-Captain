@@ -26,17 +26,40 @@ body {
   justify-content: center;
 
   padding: 20%;
-  background-color: #bdc3c7;
+  background-color: white;
 }
 
-.contain {
+
+
+/*******************
+  Button Categories
+********************/
+
+#contain {
   height: 150px;
   width: 150px;
-  background-color: white;
+  background-color: #ecf0f1;
+
+  border-radius: 8%;
 
   margin: 2%;
 }
 
+.portraits {
+  color: #f1c40f;
+}
+
+.lowlight {
+  color: #9b59b6;
+}
+
+.landscapes {
+  color: #3498db;
+}
+
+.sharpness {
+  color: #2ecc71;
+}
 /*.contain:after {
   content: "";
   display: block;

@@ -3,27 +3,38 @@ import React, { Component } from 'react';
 
 class Welcome extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+  }
+
   render() {
     return (
       <div className="categoriesContainer">
-        <div className="contain">
+        <button className="portraits" id="contain" onClick={this.handleClick.bind(this)}>
           Portraits
-        </div>
+        </button>
 
-        <div className="contain">
+        <button className="lowlight" id="contain" onClick={this.handleClick.bind(this)}>
           Lowlight
-        </div>
+        </button>
 
-        <div className="contain">
+        <button className="landscapes" id="contain" onClick={this.handleClick.bind(this)}>
           Landscapes
-        </div>
+        </button>
 
-        <div className="contain">
+        <button className="sharpness" id="contain" onClick={this.handleClick.bind(this)}>
           Sharpness
-        </div>
+        </button>
       </div>
 
     )
+  }
+  handleClick(event) {
+    //dispatch fetchVideos
+    //this.props.fetchVideos(event.target.name)
   }
 }
 

@@ -1,29 +1,33 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 
 class VideoFeed extends Component {
 
   render() {
+    console.log(this.props.videos);
     return (
         <div className="videoLinkContainer">
           <div className="videoContent">
-            <div id="youtubeVideo">
-              Vid
-            </div>
-            <div id="videoDescription">
-            <h3>Title</h3>
-            <p>text will go in this area.....</p>
-            </div>
-            <div id="youtubeVideo">
-              Vid
-            </div>
-            <div id="youtubeVideo">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/6eJcYYHyptg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-            </div>
+            {this.props.videos.slice(0, 3).map(video =>
+              <div className="youtubeVideo" key={video.id.videoId}>
+                <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + video.id.videoId} frameBorder="0" gesture="media" allow="encrypted-media" allowFullScreen></iframe>
+              </div>
+            )}
+
+
           </div>
+
         </div>
     )
   }
 }
 
-export default VideoFeed;
+function mapStateToProps(state) {
+    return {
+        videos: state.videos,
+        isLoading: state.isLoading
+    }
+}
+
+export default connect(mapStateToProps)(VideoFeed);
