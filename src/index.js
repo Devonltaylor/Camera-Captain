@@ -22,7 +22,7 @@ const store = createStore(
 );
 
 // Trigger the fetchStarships "action"
-store.dispatch(fetchVideos());
+// store.dispatch(fetchVideos());
 
 // Just standard React & Redux stuff here.
 ReactDOM.render(

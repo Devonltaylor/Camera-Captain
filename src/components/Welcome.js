@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import { fetchVideos } from '../actions';
 
 class Welcome extends Component {
 
@@ -13,29 +14,47 @@ class Welcome extends Component {
   render() {
     return (
       <div className="categoriesContainer">
-        <button className="portraits" id="contain" onClick={this.handleClick.bind(this)}>
+        <button className="portraits" id="contain" onClick={this.handleClickPortraits.bind(this)}>
           Portraits
         </button>
 
-        <button className="lowlight" id="contain" onClick={this.handleClick.bind(this)}>
+        <button className="lowlight" id="contain" onClick={this.handleClickLowlight.bind(this)}>
           Lowlight
         </button>
 
-        <button className="landscapes" id="contain" onClick={this.handleClick.bind(this)}>
+        <button className="landscapes" id="contain" onClick={this.handleClickLandscapes.bind(this)}>
           Landscapes
         </button>
 
-        <button className="sharpness" id="contain" onClick={this.handleClick.bind(this)}>
+        <button className="sharpness" id="contain" onClick={this.handleClickSharpness.bind(this)}>
           Sharpness
         </button>
       </div>
 
     )
   }
-  handleClick(event) {
+
+  handleClickPortraits(event) {
+    //dispatch fetchVideos
+    this.props.fetchVideos("portraits")
+  }
+
+  handleClickLowlight(event) {
+    //dispatch fetchVideos
+    //this.props.fetchVideos(event.target.name)
+  }
+
+  handleClickLandscapes(event) {
+    //dispatch fetchVideos
+    //this.props.fetchVideos(event.target.name)
+  }
+
+  handleClickSharpness(event) {
     //dispatch fetchVideos
     //this.props.fetchVideos(event.target.name)
   }
 }
 
-export default Welcome;
+const mapActionsToProps = {fetchVideos}
+
+export default connect(null, mapActionsToProps)(Welcome);
