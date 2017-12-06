@@ -15,9 +15,7 @@ class VideoFeed extends Component {
               </div>
             )}
 
-
           </div>
-
         </div>
     )
   }
