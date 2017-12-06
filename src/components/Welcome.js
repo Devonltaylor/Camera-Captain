@@ -41,17 +41,17 @@ class Welcome extends Component {
 
   handleClickLowlight(event) {
     //dispatch fetchVideos
-    //this.props.fetchVideos(event.target.name)
+    this.props.fetchVideos("lowlight")
   }
 
   handleClickLandscapes(event) {
     //dispatch fetchVideos
-    //this.props.fetchVideos(event.target.name)
+    this.props.fetchVideos("landscapes")
   }
 
   handleClickSharpness(event) {
     //dispatch fetchVideos
-    //this.props.fetchVideos(event.target.name)
+    this.props.fetchVideos("sharpness")
   }
 }
 
