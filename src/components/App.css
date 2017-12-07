@@ -1,18 +1,42 @@
 
-body {
-  background-color: lightgreen;
-}
 
-@media screen and (min-width: 480px) {
-    body {
-        background-color: white;
-      }
-    }
+
+
+
 
 h2 {
   color: #bdc3c7;
   margin-bottom: 20px;
 }
+
+
+
+/*******************
+    MEDIA QUERIES
+*******************/
+
+@media screen and (max-width: 750px) {
+
+  .categoriesContainer {
+
+    background-color: lightgreen;
+    background: linear-gradient(135deg, rgba(92,92,92,1) 0%, rgba(92,92,92,1) 2%, rgba(177,27,177,1) 22%, rgba(245,84,113,1) 46%, rgba(81,144,245,1) 68%, rgba(40,113,230,1) 85%, rgba(40,113,230,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c5c5c', endColorstr='#2871e6', GradientType=1 );
+  }
+
+  @keyframes BackgoundGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+}
+
+
+@media screen and (min-width: 760px) and (max-width: 1400px) {
+    body {
+        background-color: grey;
+      }
+    }
 /*******************
     MAIN PAGE
 *******************/
@@ -44,6 +68,20 @@ h2 {
 
 }
 
+.categoriesContainer {
+
+  background: linear-gradient(135deg, rgba(92,92,92,1) 0%, rgba(92,92,92,1) 2%, rgba(177,27,177,1) 18%, rgba(81,144,245,1) 42%, rgba(40,113,230,1) 63%, rgba(133,255,161,1) 85%, rgba(133,255,161,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c5c5c', endColorstr='#85ffa1', GradientType=1 );
+
+  background-size: 400% 400%;
+  animation: BackgoundGradient 30s ease infinite;
+}
+
+@keyframes BackgoundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
 
 
 /*******************
@@ -107,7 +145,7 @@ VIDEO CONTENT PAGE
   border-radius: 2%;
   margin-top: 40px;
   padding: 20%;
-  background-color: grey;
+  background-color: #404345;
 }
 
 .youtubeVideo {
@@ -144,4 +182,13 @@ VIDEO CONTENT PAGE
 
 #videoDescription {
   float: left;
+}
+
+
+/*******************
+  BACKGROUND CHANGE
+*******************/
+
+body {
+
 }
