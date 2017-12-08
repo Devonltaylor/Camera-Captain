@@ -29,3 +29,9 @@ function receiveVideos(youtubeVideos) {
         youtubeVideos
     }
 }
+
+export function showContent() {
+  return {
+    type: "CHANGE_CONTENT"
+  }
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.css';
+import { showContent } from '../actions';
 
 class VideoFeed extends Component {
 
@@ -8,6 +9,7 @@ class VideoFeed extends Component {
     console.log(this.props.videos);
     return (
         <div className="videoLinkContainer">
+          <button onClick={this.props.showContent.bind(this)}>Back to HUB</button>
           <div className="videoContent">
             {this.props.videos.slice(0, 3).map(video =>
               <div className="youtubeVideo" key={video.id.videoId}>
@@ -28,4 +30,6 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(VideoFeed);
+const mapActionsToProps= {showContent}
+
+export default connect(mapStateToProps, mapActionsToProps)(VideoFeed);

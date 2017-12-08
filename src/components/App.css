@@ -1,10 +1,9 @@
 
+/*******************
+  GENERAL STYLE
+*******************/
 
-
-
-
-
-h2 {
+h3 {
   color: #bdc3c7;
   margin-bottom: 20px;
 }
@@ -15,11 +14,19 @@ h2 {
     MEDIA QUERIES
 *******************/
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 400px) {
+
+  body {
+    background-color: #404345;
+  }
+
+  h3 {
+    color: white;
+  }
 
   .categoriesContainer {
 
-    background-color: lightgreen;
+    background-color: red;
     background: linear-gradient(135deg, rgba(92,92,92,1) 0%, rgba(92,92,92,1) 2%, rgba(177,27,177,1) 22%, rgba(245,84,113,1) 46%, rgba(81,144,245,1) 68%, rgba(40,113,230,1) 85%, rgba(40,113,230,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c5c5c', endColorstr='#2871e6', GradientType=1 );
   }
@@ -37,20 +44,26 @@ h2 {
         background-color: grey;
       }
     }
+
+
+
+
 /*******************
-    MAIN PAGE
+    APP STYLE
 *******************/
+    .menuButton {
+      display: block;
 
-.menuButton {
-  display: flex;
+    }
 
-}
+    .App {
+      text-align: center;
+      padding: 2%;
+    }
 
-.App {
-  text-align: center;
-  padding: 5%;
-}
-
+/*******************
+    WELCOME PAGE
+*******************/
 
 .categoriesContainer {
   display: flex;
@@ -62,9 +75,7 @@ h2 {
   padding: 20%;
   background-color: white;
 
-
-
-    box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #ccc;
 
 }
 
@@ -183,7 +194,6 @@ VIDEO CONTENT PAGE
 #videoDescription {
   float: left;
 }
-
 
 /*******************
   BACKGROUND CHANGE

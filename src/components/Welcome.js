@@ -14,9 +14,9 @@ class Welcome extends Component {
   render() {
     return (
 
-      <div className="categoriesContainer">      
+      <div className="categoriesContainer">
         <div className="App-title"></div>
-
+        <img src="images/model.jpg"></img>
         <button className="portraits" id="contain" onClick={this.handleClickPortraits.bind(this)}>
           Portraits
         </button>

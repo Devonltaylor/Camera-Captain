@@ -1,6 +1,8 @@
 const INITIAL_STATE = {
     videos: [],
-    isLoading: true
+    isLoading: true,
+    showWelcome: true,
+    showHub: true
 };
 
 export default function(state = INITIAL_STATE, action) {
@@ -13,8 +15,14 @@ export default function(state = INITIAL_STATE, action) {
         case "RECEIVE_VIDEOS":
             return Object.assign({}, state, {
                 videos: action.youtubeVideos,
-                isLoading: false
+                isLoading: false,
+                showWelcome: false
             });
+        case "CHANGE_CONTENT":
+            return Object.assign({}, state, {
+                showWelcome: true
+            });
+
         default:
             return state;
     }
